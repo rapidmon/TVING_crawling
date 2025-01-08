@@ -1,0 +1,6 @@
+# Node.js 관련
+node_modules/
+npm-debug.log*
+
+# Puppeteer 관련
+puppeteer/.local-chromium/

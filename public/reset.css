@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+:root {
+    --color-primary-cyan: #008689;
+    --color-primary-cyanindark: #00B5B8;
+    --color-secondary-blue: #F0F5FC;
+    --color-secondary-cyan: #F2F9F9;
+    --color-secondary-blue: #F0F5FC;
+    --color-neutral-black-100: #000000;
+    --color-neutral-gray1-100: #111111;
+    --color-neutral-black-75: #000000BF;
+    --color-neutral-gray2: #5A5A5A;
+    --color-neutral-black-50: #00000080;
+    --color-neutral-gray3: #888888;
+    --color-neutral-gray1-50: #11111180;
+    --color-neutral-gray4: #E5E5E5;
+    --color-neutral-white-100: #FFFFFF;
+    --color-neutral-white-75: #FFFFFFBF;
+    --color-neutral-white-50: #FFFFFF80;
+}
+
+/*-------------------------------------------------------------------
+  파일정의 : Settings
+  분류순서 : 기본정책 > 유틸리티 > 사용자정의(컬러, 폰트, 보더, 간격 등)
+  속성순서 : 표시 > 위치 > 넘침/흐름 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+  ## Base
+-------------------------------------------------------------------*/
+html,body,div,ul,ol,dl,li,dt,dd,p,h1,h2,h3,h4,h5,h6,table,th,td,caption,address,article,aside,canvas,details,figure,figcaption,footer,header,menu,nav,section,button,select,textarea,input,fieldset,legend,a,span,strong,em,address,dfn,small,i,b {margin: 0;padding: 0;border: 0;list-style: none;font-size: inherit;font-weight: inherit;font-family: inherit;line-height: inherit;word-break: inherit;word-wrap: inherit;box-sizing: inherit;}
+:before,:after {box-sizing: inherit;}
+article,aside,canvas,details,figure,figcaption,footer,header,menu,nav,section {display: block;}
+body {word-break: keep-all;word-wrap: break-word;box-sizing: border-box;-webkit-text-size-adjust: none;-moz-text-size-adjust: none;-ms-text-size-adjust: none;}
+html[lang='ja'] body,
+html[lang='zh'] body {word-break: normal;}
+[hidden],hr {display: none;}
+img {vertical-align: middle;}
+button {background-color: transparent;cursor: pointer;}
+b,strong {font-weight: inherit;}
+fieldset,iframe {width: 100%;}
+img,a,frame,iframe,fieldset {border: 0;}
+a {text-decoration: none;color: inherit;display: block;}
+table {width: 100%;border-spacing: 0;border-collapse: collapse;}
+caption {display: block;position: absolute;left: -9999px;}
+legend {position: absolute;left: -9999em;top: -9999em;}
+button {overflow: hidden;background-color: transparent;cursor: pointer;}
+button::-moz-focus-inner {border: 0px;padding: 0px;}
+em {font-style:normal;}
+
+html,body {height: 100%;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 700;
+    src: local('Spoqa Han Sans Neo Bold'),
+    url('https://image.donga.com/font/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
+    url('https://image.donga.com/font/SpoqaHanSansNeo-Bold.woff') format('woff'),
+    url('https://image.donga.com/font/SpoqaHanSansNeo-Bold.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 500;
+    src: local('Spoqa Han Sans Neo Medium'),
+    url('https://image.donga.com/font/SpoqaHanSansNeo-Medium.woff2') format('woff2'),
+    url('https://image.donga.com/font/SpoqaHanSansNeo-Medium.woff') format('woff'),
+    url('https://image.donga.com/font/SpoqaHanSansNeo-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 400;
+    src: local('Spoqa Han Sans Neo Regular'),
+    url('https://image.donga.com/font/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
+    url('https://image.donga.com/font/SpoqaHanSansNeo-Regular.woff') format('woff'),
+    url('https://image.donga.com/font/SpoqaHanSansNeo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 300;
+    src: local('Spoqa Han Sans Neo Light'),
+    url('https://image.donga.com/font/SpoqaHanSansNeo-Light.woff2') format('woff2'),
+    url('https://image.donga.com/font/SpoqaHanSansNeo-Light.woff') format('woff'),
+    url('https://image.donga.com/font/SpoqaHanSansNeo-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Inter Regular'),
+    url('https://image.donga.com/font/inter-v12-latin-regular.woff') format('woff'),
+    url('https://image.donga.com/font/inter-v12-latin-regular.otf') format('opentype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-style: normal;
+  src: local('Inter Medium'),
+    url('https://image.donga.com/font/inter-v12-latin-500.woff') format('woff'),
+    url('https://image.donga.com/font/inter-v12-latin-500.otf') format('opentype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-weight: 700; /* Semi Bold 이지만 Bold 대체로 사용 */
+  font-style: normal;
+  src: local('Inter Semibold'),
+    url('https://image.donga.com/font/inter-v12-latin-600.woff') format('woff'),
+    url('https://image.donga.com/font/inter-v12-latin-600.otf') format('opentype');
+}
+
+/*-------------------------------------------------------------------
+  ## General
+-------------------------------------------------------------------*/
+/* show */
+.is_hide {display: none;}
+.is_show {display: block;}
+.is_blind {display: block !important;position: absolute !important;width: 1px;height: 1px;z-index: 0 !important;overflow: hidden;margin: -1px !important;clip: rect(0 0 0 0) !important;}
+.hide_wrap {position: relative;}
+.hide_area {position: absolute;top: 0;right: 0;bottom: 0;left: 0;z-index: 0;}
+.scroll_hidden {overflow:hidden;}
+
+/* Page Scroll */
+.is_scrollFix {position: fixed;left: 0;top: 0;height: 100%;overflow: hidden;}
+
+/*-------------------------------------------------------------------
+	## Thumbnail
+-------------------------------------------------------------------*/
+/* Default */
+picture img,
+figure img {max-width: 100%;height: 100%;object-fit: cover;}
+
+select::-ms-expand {display: none;}
+
+/*-------------------------------------------------------------------
+	## Form Controls
+-------------------------------------------------------------------*/
+/* Default */
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {color: #999;}
+
+/* IE 10 + */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {color: #999;}
+
+/* Webkit Browser */
+input:-moz-placeholder,
+textarea:-moz-placeholder {color: #999;}
+
+/* Mozilla Firefox 4 to 18 */
+input::-moz-placeholder,
+textarea::-moz-placeholder {color: #999;}
+
+/* Mozilla Firefox 19+ */
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {color: transparent;}
+
+/* IE 10 + */
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {color: transparent;}
+
+/* Webkit Browser */
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {color: transparent;}
+
+/* Mozilla Firefox 4 to 18 */
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {color: transparent;}
+
+/* Mozilla Firefox 19+ */
+input {box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;border: 0px;vertical-align: middle;}
+textarea {width: 100%;vertical-align: middle;resize: none;}
+select {appearance: none;-webkit-appearance: none;-moz-appearance: none;-o-appearance: none;}
+select::-ms-expand {display: none;}
+:root select {padding: 0px 30px 0px 5px;}
